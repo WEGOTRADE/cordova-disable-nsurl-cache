@@ -12,16 +12,20 @@
 
 - (void)pluginInitialize
 {
-    int cacheSizeMemory = 8 * 1024 * 1024; // 32MB
+    //int cacheSizeMemory = 8 * 1024 * 1024; // 32MB
+    int cacheSizeMemory = 0; // No memory
     int cacheSizeDisk = 0; // Disable the cache setting to 0 bytes cache allowed
-    
+
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+
 #if __has_feature(objc_arc)
-    NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"];
-#else
-    NSURLCache* sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:@"nsurlcache"] autorelease];
-#endif
+    NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:nil];
     [NSURLCache setSharedURLCache:sharedCache];
-    
+    [sharedCache release];
+#else
+    NSURLCache* sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:nil] autorelease];
+    [NSURLCache setSharedURLCache:sharedCache];
+#endif
 }
 
 - (CordovaDisableNSURLCache*)initWithWebView:(UIWebView*)theWebView
