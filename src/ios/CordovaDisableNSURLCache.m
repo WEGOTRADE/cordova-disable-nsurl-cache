@@ -21,7 +21,6 @@
 #if __has_feature(objc_arc)
     NSURLCache* sharedCache = [[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:nil];
     [NSURLCache setSharedURLCache:sharedCache];
-    [sharedCache release];
 #else
     NSURLCache* sharedCache = [[[NSURLCache alloc] initWithMemoryCapacity:cacheSizeMemory diskCapacity:cacheSizeDisk diskPath:nil] autorelease];
     [NSURLCache setSharedURLCache:sharedCache];
