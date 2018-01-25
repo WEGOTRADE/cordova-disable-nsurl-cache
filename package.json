@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wongatech/cordova-disable-nsurl-cache"
+    "url": "git+https://github.com/wongatech/cordova-disable-nsurl-cache.git"
   },
   "keywords": [
     "cordova",
@@ -24,5 +24,11 @@
   "bugs": {
     "url": "https://github.com/wongatech/cordova-disable-nsurl-cache/issues"
   },
-  "homepage": "https://github.com/wongatech/cordova-disable-nsurl-cache#readme"
+  "homepage": "https://github.com/wongatech/cordova-disable-nsurl-cache#readme",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
 }
