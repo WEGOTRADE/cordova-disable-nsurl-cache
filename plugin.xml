@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.wongatech.cordova-disable-nsurl-cache"
+    id="cordova-disable-nsurl-cache"
     version="0.0.1-dev">
     
     <name>CordovaDisableNSURLCache</name>

@@ -3,7 +3,7 @@
   "version": "0.0.1-dev",
   "description": "Cordova plugin which completely disables the NSURL cache.",
   "cordova": {
-    "id": "com.wongatech.cordova-disable-nsurl-cache",
+    "id": "cordova-disable-nsurl-cache",
     "platforms": [
       "ios"
     ]
