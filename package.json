@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wongatech/cordova-disable-nsurl-cache.git"
+    "url": "git+https://github.com/WEGOTRADE/cordova-disable-nsurl-cache.git"
   },
   "keywords": [
     "cordova",
