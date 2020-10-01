@@ -27,9 +27,4 @@
 #endif
 }
 
-- (CordovaDisableNSURLCache*)initWithWebView:(UIWebView*)theWebView
-{
-    return self;
-}
-
 @end
